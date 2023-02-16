@@ -6,18 +6,23 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-} from 'react-native';
+import {Alert, SafeAreaView, StyleSheet} from 'react-native';
 import GradientButton from './components/GradientButton';
 import BoxShadowButton from './components/BoxShadowButton';
 
 function App(): JSX.Element {
+  const gradientBtnOnPress = () => {
+    Alert.alert('Button', 'Button 1');
+  };
+
+  const boxShadowBtnOnPress = () => {
+    Alert.alert('Button', 'Button 2');
+  };
+
   return (
     <SafeAreaView style={styles.container}>
-      <GradientButton title={'Button 1'} />
-      <BoxShadowButton title={'Button 2'} />
+      <GradientButton title={'Button 1'} onPress={gradientBtnOnPress} />
+      <BoxShadowButton title={'Button 2'} onPress={boxShadowBtnOnPress} />
     </SafeAreaView>
   );
 }

@@ -19,5 +19,6 @@ And from root directory running this command `yarn android`
 ## Project dependencies
 
 - This project uses react-native-linear-gradient for gradient background.
+- This project uses react-native-shadow-2 for box shadow running well in and both Android and Ios.
 
 
